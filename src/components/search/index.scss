@@ -1,0 +1,22 @@
+.search {
+  width: 100%;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+
+  input {
+    flex: 1;
+    border:none;
+    background-color: #fff;
+    height: 30px;
+    line-height: 30px;
+  }
+
+  .btn {
+    color: #333;
+    font-size: 16px;
+  }
+}
