@@ -149,7 +149,7 @@ module.exports = function(window, document) {const App = function(options) {wind
 /******/
 /******/
 /******/ 	// add entry module to deferred list
-/******/ 	deferredModules.push([27,0,2,4]);
+/******/ 	deferredModules.push([28,0,2,4]);
 /******/ 	// run deferred modules when ready
 /******/ 	return checkDeferredModules();
 /******/ })

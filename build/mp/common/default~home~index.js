@@ -1,6 +1,6 @@
 module.exports = function(window, document) {const App = function(options) {window.appOptions = options};var navigator = window.navigator;var HTMLElement = window.HTMLElement;var localStorage = window.localStorage;var sessionStorage = window.sessionStorage;var location = window.location;(window["webpackJsonpcreateApp"] = window["webpackJsonpcreateApp"] || []).push([[3],{
 
-/***/ 31:
+/***/ 23:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -69,8 +69,8 @@ var banner = __webpack_require__(43);
 
 
 
-function banner_banner() {
-  var items = [{}, {}, {}, {}, {}, {}, {}, {}];
+function banner_banner(props) {
+  var items = ['http://img.59iwh.com/rc/060ff530b1dc70909b219856a5325b77.jpg?t=20160914'];
   return react_default.a.createElement("div", {
     "class": 'banner'
   }, "undefined" != typeof wx && wx.getSystemInfoSync ? react_default.a.createElement("wx-swiper", null, react_default.a.createElement("wx-swiper-item", null, "\u8F6E\u64AD"), react_default.a.createElement("wx-swiper-item", null, "\u8F6E\u64AD")) //<wx-switch></wx-switch>
@@ -78,7 +78,8 @@ function banner_banner() {
     return react_default.a.createElement("div", {
       "class": 'item',
       key: i
-    }, react_default.a.createElement("div", {
+    }, react_default.a.createElement("img", {
+      src: val,
       "class": 'info'
     }));
   }));

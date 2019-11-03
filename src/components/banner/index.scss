@@ -1,5 +1,15 @@
-.banner {
+@mixin rect {
   height: 200px;
-  width: 100%;
+    width: 100%;
+}
+
+.banner {
+  @include rect();
   background-color: #999;
+  .item{
+    @include rect();
+    img{
+      @include rect();
+    }
+  }
 }
