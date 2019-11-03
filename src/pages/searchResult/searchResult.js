@@ -16,12 +16,3 @@ class App extends React.Component {
 }
 
 export default App
-
-// export default function createApp() {
-//   const container = document.createElement('div')
-//   container.id = 'app'
-//   document.body.appendChild(container)
-//   ReactDOM.render(<App />, container)
-// }
-
-// "undefined" != typeof wx && wx.getSystemInfoSync || createApp()

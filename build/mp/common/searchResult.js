@@ -58,7 +58,7 @@ module.exports = function(window, document) {const App = function(options) {wind
 /******/ 	// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 	// Promise = chunk loading, 0 = chunk loaded
 /******/ 	var installedChunks = {
-/******/ 		10: 0
+/******/ 		5: 0
 /******/ 	};
 /******/
 /******/ 	var deferredModules = [];
@@ -149,14 +149,14 @@ module.exports = function(window, document) {const App = function(options) {wind
 /******/
 /******/
 /******/ 	// add entry module to deferred list
-/******/ 	deferredModules.push([27,0,2,1,5]);
+/******/ 	deferredModules.push([30,0,1]);
 /******/ 	// run deferred modules when ready
 /******/ 	return checkDeferredModules();
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 20:
+/***/ 12:
 /***/ (function(module, exports) {
 
 function _defineProperty(obj, key, value) {
@@ -175,6 +175,100 @@ function _defineProperty(obj, key, value) {
 }
 
 module.exports = _defineProperty;
+
+/***/ }),
+
+/***/ 30:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__(0);
+var react_default = /*#__PURE__*/__webpack_require__.n(react);
+
+// EXTERNAL MODULE: ./node_modules/react-dom/index.js
+var react_dom = __webpack_require__(1);
+var react_dom_default = /*#__PURE__*/__webpack_require__.n(react_dom);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/classCallCheck.js
+var classCallCheck = __webpack_require__(2);
+var classCallCheck_default = /*#__PURE__*/__webpack_require__.n(classCallCheck);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/createClass.js
+var createClass = __webpack_require__(3);
+var createClass_default = /*#__PURE__*/__webpack_require__.n(createClass);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js
+var possibleConstructorReturn = __webpack_require__(4);
+var possibleConstructorReturn_default = /*#__PURE__*/__webpack_require__.n(possibleConstructorReturn);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/getPrototypeOf.js
+var getPrototypeOf = __webpack_require__(5);
+var getPrototypeOf_default = /*#__PURE__*/__webpack_require__.n(getPrototypeOf);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/inherits.js
+var inherits = __webpack_require__(6);
+var inherits_default = /*#__PURE__*/__webpack_require__.n(inherits);
+
+// EXTERNAL MODULE: ./src/components/goods/index.js
+var goods = __webpack_require__(8);
+
+// EXTERNAL MODULE: ./src/components/search/index.js
+var search = __webpack_require__(9);
+
+// EXTERNAL MODULE: ./src/utils/indexData.js
+var indexData = __webpack_require__(10);
+
+// CONCATENATED MODULE: ./src/pages/searchResult/searchResult.js
+
+
+
+
+
+
+
+
+
+
+
+var searchResult_App =
+/*#__PURE__*/
+function (_React$Component) {
+  inherits_default()(App, _React$Component);
+
+  function App() {
+    classCallCheck_default()(this, App);
+
+    return possibleConstructorReturn_default()(this, getPrototypeOf_default()(App).apply(this, arguments));
+  }
+
+  createClass_default()(App, [{
+    key: "render",
+    value: function render() {
+      return react_default.a.createElement("div", null, react_default.a.createElement(search["a" /* default */], null), react_default.a.createElement(goods["a" /* default */], {
+        goodslist: indexData["a" /* indexData */]
+      }));
+    }
+  }]);
+
+  return App;
+}(react_default.a.Component);
+
+/* harmony default export */ var searchResult = (searchResult_App);
+// CONCATENATED MODULE: ./src/pages/searchResult/searchResult.mp.js
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return createApp; });
+
+
+
+function createApp() {
+  var container = document.createElement('div');
+  container.id = 'app';
+  document.body.appendChild(container);
+  react_dom_default.a.render(react_default.a.createElement(searchResult, null), container);
+}
+"undefined" != typeof wx && wx.getSystemInfoSync || createApp();
 
 /***/ })
 

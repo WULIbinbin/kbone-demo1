@@ -1,2 +1,2 @@
-@import "../../common/default~home~index~searchResult.wxss";
-@import "../../common/default~home~index.wxss";
+@import "../../common/default~home~searchResult.wxss";
+@import "../../common/home.wxss";

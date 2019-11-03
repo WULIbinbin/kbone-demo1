@@ -7,8 +7,8 @@ module.exports = {
 	// 页面路由，用于页面间跳转
 	router: {
 		// 路由可以是多个值，支持动态路由
-		index: [
-			'/index'
+		home: [
+			'/pages/home/home'
 		],
 		searchResult: [
 			'/pages/searchResult/searchResult'
@@ -32,14 +32,20 @@ module.exports = {
 	},
 	// 构建输出配置
 	generate: {
+		app: 'miniprogram-app',
 		// 小程序 tabBar，详细注意事项可参考：https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#tabBar
+		// "pages": [
+		// 	"/pages/home/home",
+		// 	"/pages/profile/profile",
+		// 	"/pages/searchResult/searchResult",
+		// ],
 		tabBar: {
 			color: '#8a8a8a',
 			selectedColor: '#d4237a',
 			backgroundColor: '#ffffff',
 			list: [{
 				// 使用 pageName 替代官方文档中的 pagePath 字段
-				pageName: 'index',
+				pageName: 'home',
 				text: '主页',
 				// iconPath 和 selectedIconPath 因为不支持网络图片，需要指定对应图片的绝对路径
 				iconPath: path.resolve(__dirname, '../src/img/home.png'),
@@ -62,8 +68,6 @@ module.exports = {
 	},
 	// 页面配置，可以为单个页面做个性化处理，覆盖全局配置
 	pages: {
-		index: {},
-		searchResult: {}
 	},
 	// 优化
 	optimization: {
@@ -80,7 +84,7 @@ module.exports = {
 	},
 	// 项目配置，会被合并到 project.config.json
 	projectConfig: {
-		appid: '',
+		appid: 'wx2b20075ec7ec6359',
 		projectname: 'kbone-demo1',
 	},
 	// 包配置，会被合并到 package.json

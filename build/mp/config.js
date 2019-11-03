@@ -2,9 +2,9 @@ module.exports = {
 	"origin": "https://test.miniprogram.com",
 	"entry": "/test/aaa",
 	"router": {
-		"index": [
+		"home": [
 			{
-				"regexp": "^\\/index(?:\\/)?$",
+				"regexp": "^\\/pages\\/home\\/home(?:\\/)?$",
 				"options": "i"
 			}
 		],
@@ -24,16 +24,15 @@ module.exports = {
 	"runtime": {
 		"subpackagesMap": {},
 		"tabBarMap": {
-			"/pages/index/index": true,
+			"/pages/home/index": true,
 			"/pages/profile/index": true
 		},
 		"usingComponents": {}
 	},
 	"pages": {
-		"index": {},
-		"searchResult": {},
 		"home": {},
-		"profile": {}
+		"profile": {},
+		"searchResult": {}
 	},
 	"redirect": {
 		"notFound": "index",

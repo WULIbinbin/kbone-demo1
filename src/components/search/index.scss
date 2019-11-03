@@ -7,12 +7,16 @@
   align-items: center;
   justify-content: flex-start;
 
-  input {
+  input,.h5-input {
     flex: 1;
     border:none;
     background-color: #fff;
     height: 30px;
     line-height: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
   }
 
   .btn {

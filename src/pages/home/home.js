@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactDOM from 'react-dom'
 import Navigate from '../../components/navigate'
 import Banner from '../../components/banner'
 import Broadcast from '../../components/broadcast'
@@ -21,5 +22,6 @@ class App extends React.Component {
     )
   }
 }
+
 
 export default App

@@ -15,10 +15,10 @@ export default class searchBar extends React.Component {
   searchClick() {
     if (process.env.isMiniprogram) {
       wx.navigateTo({
-        url: '/pages/searchResult/searchResult'
+        url: '/pages/searchResult/index'
       })
-    }else{
-      console.log('window',this.props)
+    } else {
+      console.log('window', this.props)
       window.location.hash = '/searchResult'
     }
   }

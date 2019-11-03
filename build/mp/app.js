@@ -1,4 +1,4 @@
-const fakeWindow = {};const fakeDocument = {};;const appConfig = fakeWindow.appOptions || {};
+const fakeWindow = {};const fakeDocument = {};require('common/miniprogram-app.js')(fakeWindow, fakeDocument);const appConfig = fakeWindow.appOptions || {};
 
 const LIFE_CYCLE_METHODS = ['onLaunch', 'onShow', 'onHide', 'onError', 'onPageNotFound']
 const extraConfig = {}
