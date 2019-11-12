@@ -1,4 +1,4 @@
-module.exports = function(window, document) {const App = function(options) {window.appOptions = options};var navigator = window.navigator;var HTMLElement = window.HTMLElement;var localStorage = window.localStorage;var sessionStorage = window.sessionStorage;var location = window.location;(window["webpackJsonpcreateApp"] = window["webpackJsonpcreateApp"] || []).push([[6],{
+module.exports = function(window, document) {const App = function(options) {window.appOptions = options};var navigator = window.navigator;var HTMLElement = window.HTMLElement;var localStorage = window.localStorage;var sessionStorage = window.sessionStorage;var location = window.location;(window["webpackJsonpcreateApp"] = window["webpackJsonpcreateApp"] || []).push([[8],{
 
 /***/ 12:
 /***/ (function(module, exports) {
@@ -22,7 +22,7 @@ module.exports = _defineProperty;
 
 /***/ }),
 
-/***/ 21:
+/***/ 24:
 /***/ (function(module, exports) {
 
 function _arrayWithHoles(arr) {
@@ -33,7 +33,7 @@ module.exports = _arrayWithHoles;
 
 /***/ }),
 
-/***/ 22:
+/***/ 25:
 /***/ (function(module, exports) {
 
 function _iterableToArrayLimit(arr, i) {
@@ -70,7 +70,7 @@ module.exports = _iterableToArrayLimit;
 
 /***/ }),
 
-/***/ 23:
+/***/ 26:
 /***/ (function(module, exports) {
 
 function _nonIterableRest() {
@@ -81,14 +81,14 @@ module.exports = _nonIterableRest;
 
 /***/ }),
 
-/***/ 7:
+/***/ 8:
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayWithHoles = __webpack_require__(21);
+var arrayWithHoles = __webpack_require__(24);
 
-var iterableToArrayLimit = __webpack_require__(22);
+var iterableToArrayLimit = __webpack_require__(25);
 
-var nonIterableRest = __webpack_require__(23);
+var nonIterableRest = __webpack_require__(26);
 
 function _slicedToArray(arr, i) {
   return arrayWithHoles(arr) || iterableToArrayLimit(arr, i) || nonIterableRest();

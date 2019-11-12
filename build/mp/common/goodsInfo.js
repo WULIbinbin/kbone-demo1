@@ -58,7 +58,7 @@ module.exports = function(window, document) {const App = function(options) {wind
 /******/ 	// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 	// Promise = chunk loading, 0 = chunk loaded
 /******/ 	var installedChunks = {
-/******/ 		6: 0
+/******/ 		3: 0
 /******/ 	};
 /******/
 /******/ 	var deferredModules = [];
@@ -149,14 +149,57 @@ module.exports = function(window, document) {const App = function(options) {wind
 /******/
 /******/
 /******/ 	// add entry module to deferred list
-/******/ 	deferredModules.push([35,0]);
+/******/ 	deferredModules.push([33,0,1]);
 /******/ 	// run deferred modules when ready
 /******/ 	return checkDeferredModules();
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 35:
+/***/ 12:
+/***/ (function(module, exports) {
+
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+
+module.exports = _defineProperty;
+
+/***/ }),
+
+/***/ 21:
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
+/***/ 22:
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
+/***/ 23:
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
+/***/ 33:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -190,7 +233,18 @@ var getPrototypeOf_default = /*#__PURE__*/__webpack_require__.n(getPrototypeOf);
 var inherits = __webpack_require__(5);
 var inherits_default = /*#__PURE__*/__webpack_require__.n(inherits);
 
-// CONCATENATED MODULE: ./src/pages/profile/profile.js
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/assertThisInitialized.js
+var assertThisInitialized = __webpack_require__(10);
+var assertThisInitialized_default = /*#__PURE__*/__webpack_require__.n(assertThisInitialized);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/defineProperty.js
+var defineProperty = __webpack_require__(12);
+var defineProperty_default = /*#__PURE__*/__webpack_require__.n(defineProperty);
+
+// EXTERNAL MODULE: ./src/components/tabs/index.scss
+var tabs = __webpack_require__(21);
+
+// CONCATENATED MODULE: ./src/components/tabs/index.js
 
 
 
@@ -199,7 +253,173 @@ var inherits_default = /*#__PURE__*/__webpack_require__.n(inherits);
 
 
 
-var profile_App =
+
+
+var tabs_Tabs =
+/*#__PURE__*/
+function (_React$Component) {
+  inherits_default()(Tabs, _React$Component);
+
+  function Tabs() {
+    var _getPrototypeOf2;
+
+    var _this;
+
+    classCallCheck_default()(this, Tabs);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = possibleConstructorReturn_default()(this, (_getPrototypeOf2 = getPrototypeOf_default()(Tabs)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+    defineProperty_default()(assertThisInitialized_default()(_this), "state", {
+      translateX: 0,
+      current: 0,
+      windowHeight: 0,
+      windowWidth: 0
+    });
+
+    return _this;
+  }
+
+  createClass_default()(Tabs, [{
+    key: "componentWillMount",
+    value: function componentWillMount() {
+      if (true) {
+        this.setState({
+          windowHeight: wx.getSystemInfoSync().windowHeight,
+          windowWidth: wx.getSystemInfoSync().windowWidth
+        });
+      }
+    }
+  }, {
+    key: "handleTabbarTap",
+    value: function handleTabbarTap(current, event) {
+      var windowWidth = this.state.windowWidth;
+      this.setState({
+        current: current,
+        translateX: windowWidth * current
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      var children = this.props.children;
+      var tabbar = [];
+      children.length > 0 && children.map(function (val) {
+        if (val.props && val.props.title) {
+          tabbar.push(val.props.title);
+        }
+      });
+      var _this$state = this.state,
+          translateX = _this$state.translateX,
+          current = _this$state.current,
+          windowHeight = _this$state.windowHeight,
+          windowWidth = _this$state.windowWidth;
+      return react_default.a.createElement("div", {
+        "class": 'tabs'
+      }, react_default.a.createElement("div", {
+        "class": 'tabs-bar'
+      }, tabbar.length > 0 && tabbar.map(function (val, i) {
+        return react_default.a.createElement("div", {
+          "class": ['tabs-bar--item', current === i ? 'tabs-bar--oncheck' : ''],
+          onClick: _this2.handleTabbarTap.bind(_this2, i)
+        }, react_default.a.createElement("div", {
+          "class": 'tabs-bar--item-text'
+        }, val));
+      })), react_default.a.createElement("div", {
+        "class": 'tabs-container'
+      }, react_default.a.createElement("div", {
+        "class": 'tabs-scroll-view',
+        style: {
+          transform: "translateX(-".concat(translateX, "px)"),
+          width: windowWidth * (children.length || 1)
+        }
+      }, children.length > 0 && children.map(function (val) {
+        val.props['windowHeight'] = windowHeight;
+        return val;
+      }))));
+    }
+  }]);
+
+  return Tabs;
+}(react_default.a.Component);
+
+
+// EXTERNAL MODULE: ./src/components/tabs/panel/index.scss
+var panel = __webpack_require__(22);
+
+// CONCATENATED MODULE: ./src/components/tabs/panel/index.js
+
+
+
+
+
+
+
+
+var panel_Panel =
+/*#__PURE__*/
+function (_React$Component) {
+  inherits_default()(Panel, _React$Component);
+
+  function Panel() {
+    classCallCheck_default()(this, Panel);
+
+    return possibleConstructorReturn_default()(this, getPrototypeOf_default()(Panel).apply(this, arguments));
+  }
+
+  createClass_default()(Panel, [{
+    key: "render",
+    value: function render() {
+      console.log(this);
+      var _this$props = this.props,
+          children = _this$props.children,
+          windowHeight = _this$props.windowHeight,
+          windowWidth = _this$props.windowWidth;
+      var height = windowHeight - 44;
+      return react_default.a.createElement("div", {
+        "class": 'panel',
+        style: {
+          height: height,
+          width: windowWidth
+        }
+      }, react_default.a.createElement("wx-scroll-view", {
+        "scroll-y": true,
+        "class": 'panel-scroll-view',
+        style: {
+          height: height
+        }
+      }, children));
+    }
+  }]);
+
+  return Panel;
+}(react_default.a.Component);
+
+
+// EXTERNAL MODULE: ./src/utils/indexData.js
+var indexData = __webpack_require__(7);
+
+// EXTERNAL MODULE: ./src/pages/goodsInfo/goodsInfo.scss
+var goodsInfo_goodsInfo = __webpack_require__(23);
+
+// CONCATENATED MODULE: ./src/pages/goodsInfo/goodsInfo.js
+
+
+
+
+
+
+
+
+
+
+
+var goodsInfo_App =
 /*#__PURE__*/
 function (_React$Component) {
   inherits_default()(App, _React$Component);
@@ -211,24 +431,25 @@ function (_React$Component) {
   }
 
   createClass_default()(App, [{
-    key: "handleGetavatar",
-    value: function handleGetavatar(e) {
-      console.log(e);
-    }
-  }, {
     key: "render",
     value: function render() {
-      return react_default.a.createElement("div", null, react_default.a.createElement("p", {
-        "class": ''
-      }, "\u4E2A\u4EBA\u4E2D\u5FC3"));
+      var goodsInfo = indexData["a" /* indexData */][0];
+      console.log(goodsInfo);
+      return react_default.a.createElement("div", {
+        "class": 'goodsInfo'
+      }, react_default.a.createElement(tabs_Tabs, null, react_default.a.createElement(panel_Panel, {
+        title: "详情"
+      }, "\u8BE6\u60C5..."), react_default.a.createElement(panel_Panel, {
+        title: "评论"
+      }, "\u8BC4\u8BBA...")));
     }
   }]);
 
   return App;
 }(react_default.a.Component);
 
-/* harmony default export */ var profile = (profile_App);
-// CONCATENATED MODULE: ./src/pages/profile/profile.mp.js
+/* harmony default export */ var pages_goodsInfo_goodsInfo = (goodsInfo_App);
+// CONCATENATED MODULE: ./src/pages/goodsInfo/goodsInfo.mp.js
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return createApp; });
 
 
@@ -237,7 +458,7 @@ function createApp() {
   var container = document.createElement('div');
   container.id = 'app';
   document.body.appendChild(container);
-  react_dom_default.a.render(react_default.a.createElement(profile, null), container);
+  react_dom_default.a.render(react_default.a.createElement(pages_goodsInfo_goodsInfo, null), container);
 }
 "undefined" != typeof wx && wx.getSystemInfoSync || createApp();
 

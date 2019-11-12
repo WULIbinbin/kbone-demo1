@@ -1,5 +1,6 @@
 {
 	"pages": [
+		"pages/goodsInfo/index",
 		"pages/home/index",
 		"pages/profile/index",
 		"pages/searchResult/index"

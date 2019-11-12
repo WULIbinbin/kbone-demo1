@@ -58,7 +58,7 @@ module.exports = function(window, document) {const App = function(options) {wind
 /******/ 	// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 	// Promise = chunk loading, 0 = chunk loaded
 /******/ 	var installedChunks = {
-/******/ 		2: 0
+/******/ 		4: 0
 /******/ 	};
 /******/
 /******/ 	var deferredModules = [];
@@ -149,28 +149,21 @@ module.exports = function(window, document) {const App = function(options) {wind
 /******/
 /******/
 /******/ 	// add entry module to deferred list
-/******/ 	deferredModules.push([29,0,6,1]);
+/******/ 	deferredModules.push([32,0,8,1,2]);
 /******/ 	// run deferred modules when ready
 /******/ 	return checkDeferredModules();
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 24:
+/***/ 27:
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
 
 /***/ }),
 
-/***/ 25:
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
-
-/***/ }),
-
-/***/ 26:
+/***/ 28:
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
@@ -178,6 +171,13 @@ module.exports = function(window, document) {const App = function(options) {wind
 /***/ }),
 
 /***/ 29:
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
+/***/ 32:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -188,35 +188,35 @@ var react = __webpack_require__(0);
 var react_default = /*#__PURE__*/__webpack_require__.n(react);
 
 // EXTERNAL MODULE: ./node_modules/react-dom/index.js
-var react_dom = __webpack_require__(1);
+var react_dom = __webpack_require__(6);
 var react_dom_default = /*#__PURE__*/__webpack_require__.n(react_dom);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/classCallCheck.js
-var classCallCheck = __webpack_require__(2);
+var classCallCheck = __webpack_require__(1);
 var classCallCheck_default = /*#__PURE__*/__webpack_require__.n(classCallCheck);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/createClass.js
-var createClass = __webpack_require__(3);
+var createClass = __webpack_require__(2);
 var createClass_default = /*#__PURE__*/__webpack_require__.n(createClass);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/possibleConstructorReturn.js
-var possibleConstructorReturn = __webpack_require__(4);
+var possibleConstructorReturn = __webpack_require__(3);
 var possibleConstructorReturn_default = /*#__PURE__*/__webpack_require__.n(possibleConstructorReturn);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/getPrototypeOf.js
-var getPrototypeOf = __webpack_require__(5);
+var getPrototypeOf = __webpack_require__(4);
 var getPrototypeOf_default = /*#__PURE__*/__webpack_require__.n(getPrototypeOf);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/inherits.js
-var inherits = __webpack_require__(6);
+var inherits = __webpack_require__(5);
 var inherits_default = /*#__PURE__*/__webpack_require__.n(inherits);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/slicedToArray.js
-var slicedToArray = __webpack_require__(7);
+var slicedToArray = __webpack_require__(8);
 var slicedToArray_default = /*#__PURE__*/__webpack_require__.n(slicedToArray);
 
 // EXTERNAL MODULE: ./src/components/navigate/index.scss
-var components_navigate = __webpack_require__(24);
+var components_navigate = __webpack_require__(27);
 
 // CONCATENATED MODULE: ./src/components/navigate/index.js
 
@@ -235,16 +235,25 @@ function navigate_navigate() {
   }, items.map(function (val, i) {
     return react_default.a.createElement("div", {
       "class": 'item',
-      key: i
+      key: i,
+      onClick: handleGoto
     }, react_default.a.createElement("div", {
       "class": 'info'
     }));
   }));
 }
 
+function handleGoto() {
+  if (true) {
+    wx.navigateTo({
+      url: '/pages/goodsInfo/index'
+    });
+  } else {}
+}
+
 /* harmony default export */ var src_components_navigate = (navigate_navigate);
 // EXTERNAL MODULE: ./src/components/banner/index.scss
-var banner = __webpack_require__(25);
+var banner = __webpack_require__(28);
 
 // CONCATENATED MODULE: ./src/components/banner/index.js
 
@@ -268,7 +277,7 @@ function banner_banner(props) {
 
 /* harmony default export */ var components_banner = (banner_banner);
 // EXTERNAL MODULE: ./src/components/broadcast/index.scss
-var broadcast = __webpack_require__(26);
+var broadcast = __webpack_require__(29);
 
 // CONCATENATED MODULE: ./src/components/broadcast/index.js
 
@@ -298,13 +307,13 @@ function broadcast_broadcast() {
 
 /* harmony default export */ var components_broadcast = (broadcast_broadcast);
 // EXTERNAL MODULE: ./src/components/goods/index.js
-var goods = __webpack_require__(8);
+var goods = __webpack_require__(11);
 
 // EXTERNAL MODULE: ./src/components/search/index.js
 var search = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/utils/indexData.js
-var indexData = __webpack_require__(10);
+var indexData = __webpack_require__(7);
 
 // CONCATENATED MODULE: ./src/pages/home/home.js
 
@@ -335,9 +344,7 @@ function (_React$Component) {
   createClass_default()(App, [{
     key: "render",
     value: function render() {
-      return react_default.a.createElement("div", null, react_default.a.createElement(search["a" /* default */], null), react_default.a.createElement(components_banner, null), react_default.a.createElement(src_components_navigate, null), react_default.a.createElement(components_broadcast, null), react_default.a.createElement(goods["a" /* default */], {
-        goodslist: indexData["a" /* indexData */]
-      }));
+      return react_default.a.createElement("div", null, react_default.a.createElement(search["a" /* default */], null), react_default.a.createElement(components_banner, null), react_default.a.createElement(src_components_navigate, null), react_default.a.createElement(components_broadcast, null));
     }
   }]);
 

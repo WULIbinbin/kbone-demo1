@@ -1,7 +1,7 @@
 const mp = require('miniprogram-render')
 const config = require('../../config')
 
-function init(window, document) {require('../../common/vendors~home~profile~searchResult.js')(window, document);require('../../common/default~home~searchResult.js')(window, document);require('../../common/searchResult.js')(window, document)}
+function init(window, document) {require('../../common/vendors~goodsInfo~home~profile~searchResult.js')(window, document);require('../../common/default~goodsInfo~home~searchResult.js')(window, document);require('../../common/default~home~searchResult.js')(window, document);require('../../common/searchResult.js')(window, document)}
 
 /**
  * 处理一些特殊的页面

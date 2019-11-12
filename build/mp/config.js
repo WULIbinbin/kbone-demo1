@@ -30,6 +30,7 @@ module.exports = {
 		"usingComponents": {}
 	},
 	"pages": {
+		"goodsInfo": {},
 		"home": {},
 		"profile": {},
 		"searchResult": {}
