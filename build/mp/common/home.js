@@ -156,21 +156,21 @@ module.exports = function(window, document) {const App = function(options) {wind
 /************************************************************************/
 /******/ ({
 
-/***/ 27:
+/***/ 24:
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
 
 /***/ }),
 
-/***/ 28:
+/***/ 25:
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
 
 /***/ }),
 
-/***/ 29:
+/***/ 26:
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
@@ -212,11 +212,11 @@ var inherits = __webpack_require__(5);
 var inherits_default = /*#__PURE__*/__webpack_require__.n(inherits);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/slicedToArray.js
-var slicedToArray = __webpack_require__(8);
+var slicedToArray = __webpack_require__(10);
 var slicedToArray_default = /*#__PURE__*/__webpack_require__.n(slicedToArray);
 
 // EXTERNAL MODULE: ./src/components/navigate/index.scss
-var components_navigate = __webpack_require__(27);
+var components_navigate = __webpack_require__(24);
 
 // CONCATENATED MODULE: ./src/components/navigate/index.js
 
@@ -253,7 +253,7 @@ function handleGoto() {
 
 /* harmony default export */ var src_components_navigate = (navigate_navigate);
 // EXTERNAL MODULE: ./src/components/banner/index.scss
-var banner = __webpack_require__(28);
+var banner = __webpack_require__(25);
 
 // CONCATENATED MODULE: ./src/components/banner/index.js
 
@@ -277,7 +277,7 @@ function banner_banner(props) {
 
 /* harmony default export */ var components_banner = (banner_banner);
 // EXTERNAL MODULE: ./src/components/broadcast/index.scss
-var broadcast = __webpack_require__(29);
+var broadcast = __webpack_require__(26);
 
 // CONCATENATED MODULE: ./src/components/broadcast/index.js
 
@@ -310,10 +310,10 @@ function broadcast_broadcast() {
 var goods = __webpack_require__(11);
 
 // EXTERNAL MODULE: ./src/components/search/index.js
-var search = __webpack_require__(9);
+var search = __webpack_require__(12);
 
 // EXTERNAL MODULE: ./src/utils/indexData.js
-var indexData = __webpack_require__(7);
+var indexData = __webpack_require__(8);
 
 // CONCATENATED MODULE: ./src/pages/home/home.js
 
@@ -344,7 +344,9 @@ function (_React$Component) {
   createClass_default()(App, [{
     key: "render",
     value: function render() {
-      return react_default.a.createElement("div", null, react_default.a.createElement(search["a" /* default */], null), react_default.a.createElement(components_banner, null), react_default.a.createElement(src_components_navigate, null), react_default.a.createElement(components_broadcast, null));
+      return react_default.a.createElement("div", null, react_default.a.createElement(search["a" /* default */], null), react_default.a.createElement(components_banner, null), react_default.a.createElement(src_components_navigate, null), react_default.a.createElement(components_broadcast, null), react_default.a.createElement(goods["a" /* default */], {
+        goodslist: indexData["a" /* indexData */]
+      }));
     }
   }]);
 

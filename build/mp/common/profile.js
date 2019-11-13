@@ -149,14 +149,14 @@ module.exports = function(window, document) {const App = function(options) {wind
 /******/
 /******/
 /******/ 	// add entry module to deferred list
-/******/ 	deferredModules.push([35,0]);
+/******/ 	deferredModules.push([34,0]);
 /******/ 	// run deferred modules when ready
 /******/ 	return checkDeferredModules();
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 35:
+/***/ 34:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -186,11 +186,24 @@ var possibleConstructorReturn_default = /*#__PURE__*/__webpack_require__.n(possi
 var getPrototypeOf = __webpack_require__(4);
 var getPrototypeOf_default = /*#__PURE__*/__webpack_require__.n(getPrototypeOf);
 
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/assertThisInitialized.js
+var assertThisInitialized = __webpack_require__(9);
+var assertThisInitialized_default = /*#__PURE__*/__webpack_require__.n(assertThisInitialized);
+
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/inherits.js
 var inherits = __webpack_require__(5);
 var inherits_default = /*#__PURE__*/__webpack_require__.n(inherits);
 
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/defineProperty.js
+var defineProperty = __webpack_require__(7);
+var defineProperty_default = /*#__PURE__*/__webpack_require__.n(defineProperty);
+
+// EXTERNAL MODULE: ./src/pages/profile/profile.scss
+var profile = __webpack_require__(36);
+
 // CONCATENATED MODULE: ./src/pages/profile/profile.js
+
+
 
 
 
@@ -205,29 +218,76 @@ function (_React$Component) {
   inherits_default()(App, _React$Component);
 
   function App() {
+    var _getPrototypeOf2;
+
+    var _this;
+
     classCallCheck_default()(this, App);
 
-    return possibleConstructorReturn_default()(this, getPrototypeOf_default()(App).apply(this, arguments));
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = possibleConstructorReturn_default()(this, (_getPrototypeOf2 = getPrototypeOf_default()(App)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+    defineProperty_default()(assertThisInitialized_default()(_this), "getUserButton", null);
+
+    defineProperty_default()(assertThisInitialized_default()(_this), "getUserButton2", null);
+
+    defineProperty_default()(assertThisInitialized_default()(_this), "state", {
+      userInfo: {}
+    });
+
+    return _this;
   }
 
   createClass_default()(App, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      console.log(this.getUserButton);
+      this.getUserButton.addEventListener('getuserinfo', this.handleGetavatar.bind(this));
+    }
+  }, {
     key: "handleGetavatar",
     value: function handleGetavatar(e) {
-      console.log(e);
+      var userInfo = e.userInfo;
+      this.setState({
+        userInfo: userInfo
+      });
     }
   }, {
     key: "render",
     value: function render() {
+      var _this2 = this;
+
       return react_default.a.createElement("div", null, react_default.a.createElement("p", {
         "class": ''
-      }, "\u4E2A\u4EBA\u4E2D\u5FC3"));
+      }, "\u4E2A\u4EBA\u4E2D\u5FC3"), react_default.a.createElement("wx-button", {
+        "class": 'profile-button',
+        "open-type": "share"
+      }, "\u5206\u4EAB"), react_default.a.createElement("wx-button", {
+        ref: function ref(e) {
+          _this2.getUserButton = e;
+        },
+        "class": 'profile-button',
+        "open-type": "getUserInfo" //bindgetuserinfo={this.handleGetavatar}
+
+      }, "\u83B7\u53D6\u5934\u50CF"), react_default.a.createElement("img", {
+        src: this.state.userInfo.avatarUrl,
+        "class": 'avatar'
+      }), react_default.a.createElement("comp-a", {
+        "class": "block",
+        prefix: "prefixA",
+        suffix: "suffixA",
+        someevent: "onEvent"
+      }));
     }
   }]);
 
   return App;
 }(react_default.a.Component);
 
-/* harmony default export */ var profile = (profile_App);
+/* harmony default export */ var profile_profile = (profile_App);
 // CONCATENATED MODULE: ./src/pages/profile/profile.mp.js
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return createApp; });
 
@@ -237,9 +297,16 @@ function createApp() {
   var container = document.createElement('div');
   container.id = 'app';
   document.body.appendChild(container);
-  react_dom_default.a.render(react_default.a.createElement(profile, null), container);
+  react_dom_default.a.render(react_default.a.createElement(profile_profile, null), container);
 }
 "undefined" != typeof wx && wx.getSystemInfoSync || createApp();
+
+/***/ }),
+
+/***/ 36:
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
 
 /***/ })
 

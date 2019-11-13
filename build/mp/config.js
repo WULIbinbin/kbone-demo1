@@ -30,10 +30,10 @@ module.exports = {
 		"usingComponents": {}
 	},
 	"pages": {
-		"goodsInfo": {},
 		"home": {},
 		"profile": {},
-		"searchResult": {}
+		"searchResult": {},
+		"goodsInfo": {}
 	},
 	"redirect": {
 		"notFound": "index",

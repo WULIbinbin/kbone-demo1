@@ -97,6 +97,7 @@ module.exports = {
     }],
     handles: {
         onButtonGetUserInfo(evt) {
+          console.log(2333)
             this.callSimpleEvent('getuserinfo', evt)
         },
 

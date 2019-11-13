@@ -34,11 +34,21 @@ module.exports = {
 	generate: {
 		app: 'miniprogram-app',
 		// 小程序 tabBar，详细注意事项可参考：https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#tabBar
-		// "pages": [
-		// 	"/pages/home/home",
-		// 	"/pages/profile/profile",
-		// 	"/pages/searchResult/searchResult",
-		// ],
+		wxCustomComponent: {
+			root: path.join(__dirname, '../src/custom-components'),
+			usingComponents: {
+				'comp-a': {
+					path: 'comp-a',
+					props: ['prefix', 'suffix'],
+					events: ['someevent'],
+				},
+				'comp-b': {
+					path: 'comp-b/index',
+					props: ['prefix'],
+				},
+				'comp-c': 'comp-c',
+			},
+		},
 		tabBar: {
 			color: '#8a8a8a',
 			selectedColor: '#d4237a',

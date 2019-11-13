@@ -10,11 +10,11 @@ module.exports = {
     mode: 'production',
     entry: {
         'miniprogram-app': path.resolve(__dirname, '../src/app.js'),
-        goodsInfo: path.resolve(__dirname, '../src/pages/goodsInfo/goodsInfo.mp.js'),
+        //goodsInfo: path.resolve(__dirname, '../src/pages/goodsInfo/goodsInfo.mp.js'),
         home: path.resolve(__dirname, '../src/pages/home/home.mp.js'),
         profile: path.resolve(__dirname, '../src/pages/profile/profile.mp.js'),
         searchResult: path.resolve(__dirname, '../src/pages/searchResult/searchResult.mp.js'),
-        //goodsInfo: path.resolve(__dirname, '../src/pages/goodsInfo/goodsInfo.mp.js'),
+        goodsInfo: path.resolve(__dirname, '../src/pages/goodsInfo/goodsInfo.mp.js'),
     },
     output: {
         path: path.resolve(__dirname, '../build/mp/common'), // 放到小程序代码目录中的 common 目录下

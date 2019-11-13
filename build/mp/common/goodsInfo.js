@@ -156,43 +156,21 @@ module.exports = function(window, document) {const App = function(options) {wind
 /************************************************************************/
 /******/ ({
 
-/***/ 12:
-/***/ (function(module, exports) {
-
-function _defineProperty(obj, key, value) {
-  if (key in obj) {
-    Object.defineProperty(obj, key, {
-      value: value,
-      enumerable: true,
-      configurable: true,
-      writable: true
-    });
-  } else {
-    obj[key] = value;
-  }
-
-  return obj;
-}
-
-module.exports = _defineProperty;
-
-/***/ }),
-
-/***/ 21:
+/***/ 29:
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
 
 /***/ }),
 
-/***/ 22:
+/***/ 30:
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
 
 /***/ }),
 
-/***/ 23:
+/***/ 31:
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
@@ -234,15 +212,15 @@ var inherits = __webpack_require__(5);
 var inherits_default = /*#__PURE__*/__webpack_require__.n(inherits);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/assertThisInitialized.js
-var assertThisInitialized = __webpack_require__(10);
+var assertThisInitialized = __webpack_require__(9);
 var assertThisInitialized_default = /*#__PURE__*/__webpack_require__.n(assertThisInitialized);
 
 // EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/defineProperty.js
-var defineProperty = __webpack_require__(12);
+var defineProperty = __webpack_require__(7);
 var defineProperty_default = /*#__PURE__*/__webpack_require__.n(defineProperty);
 
 // EXTERNAL MODULE: ./src/components/tabs/index.scss
-var tabs = __webpack_require__(21);
+var tabs = __webpack_require__(29);
 
 // CONCATENATED MODULE: ./src/components/tabs/index.js
 
@@ -350,7 +328,7 @@ function (_React$Component) {
 
 
 // EXTERNAL MODULE: ./src/components/tabs/panel/index.scss
-var panel = __webpack_require__(22);
+var panel = __webpack_require__(30);
 
 // CONCATENATED MODULE: ./src/components/tabs/panel/index.js
 
@@ -401,13 +379,44 @@ function (_React$Component) {
 }(react_default.a.Component);
 
 
+// CONCATENATED MODULE: ./src/components/test-component1/index.js
+
+
+
+
+
+
+
+var test_component1_Tabs =
+/*#__PURE__*/
+function (_React$Component) {
+  inherits_default()(Tabs, _React$Component);
+
+  function Tabs() {
+    classCallCheck_default()(this, Tabs);
+
+    return possibleConstructorReturn_default()(this, getPrototypeOf_default()(Tabs).apply(this, arguments));
+  }
+
+  createClass_default()(Tabs, [{
+    key: "render",
+    value: function render() {
+      return react_default.a.createElement("div", null, react_default.a.createElement("p", null, "\u6211\u662Ftest-component1"), this.props.children);
+    }
+  }]);
+
+  return Tabs;
+}(react_default.a.Component);
+
+
 // EXTERNAL MODULE: ./src/utils/indexData.js
-var indexData = __webpack_require__(7);
+var indexData = __webpack_require__(8);
 
 // EXTERNAL MODULE: ./src/pages/goodsInfo/goodsInfo.scss
-var goodsInfo_goodsInfo = __webpack_require__(23);
+var goodsInfo_goodsInfo = __webpack_require__(31);
 
 // CONCATENATED MODULE: ./src/pages/goodsInfo/goodsInfo.js
+
 
 
 
@@ -434,12 +443,26 @@ function (_React$Component) {
     key: "render",
     value: function render() {
       var goodsInfo = indexData["a" /* indexData */][0];
-      console.log(goodsInfo);
       return react_default.a.createElement("div", {
         "class": 'goodsInfo'
-      }, react_default.a.createElement(tabs_Tabs, null, react_default.a.createElement(panel_Panel, {
+      }, react_default.a.createElement("div", {
+        "class": 'goodsInfo-container'
+      }, react_default.a.createElement("img", {
+        src: goodsInfo.pic_url,
+        "class": 'goodsInfo-bannerImg'
+      }), react_default.a.createElement("p", {
+        "class": 'goodsInfo-title'
+      }, goodsInfo.title), react_default.a.createElement("div", {
+        "class": 'goodsInfo-info'
+      }, react_default.a.createElement("span", {
+        "class": 'goodsInfo-info-sku'
+      }, "\u5E93\u5B58\uFF1A", goodsInfo.sort_order), react_default.a.createElement("div", {
+        "class": 'goodsInfo-info-price'
+      }, "\u552E\u4EF7\uFF1A", react_default.a.createElement("span", null, "\uFFE5", goodsInfo.price))), react_default.a.createElement("div", {
+        "class": 'goodsInfo-selectbar'
+      }, react_default.a.createElement("span", null, "\u8BF7\u9009\u62E9\u4EA7\u54C1\u89C4\u683C"))), react_default.a.createElement(tabs_Tabs, null, react_default.a.createElement(panel_Panel, {
         title: "详情"
-      }, "\u8BE6\u60C5..."), react_default.a.createElement(panel_Panel, {
+      }, react_default.a.createElement("p", null, "\u8BE6\u60C5..."), react_default.a.createElement(test_component1_Tabs, null, react_default.a.createElement(test_component1_Tabs, null, react_default.a.createElement(test_component1_Tabs, null, react_default.a.createElement(test_component1_Tabs, null, react_default.a.createElement(test_component1_Tabs, null, react_default.a.createElement(test_component1_Tabs, null))))))), react_default.a.createElement(panel_Panel, {
         title: "评论"
       }, "\u8BC4\u8BBA...")));
     }

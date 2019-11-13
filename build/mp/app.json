@@ -1,9 +1,9 @@
 {
 	"pages": [
-		"pages/goodsInfo/index",
 		"pages/home/index",
 		"pages/profile/index",
-		"pages/searchResult/index"
+		"pages/searchResult/index",
+		"pages/goodsInfo/index"
 	],
 	"window": {
 		"backgroundTextStyle": "light",

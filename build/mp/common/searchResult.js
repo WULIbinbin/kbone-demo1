@@ -149,36 +149,14 @@ module.exports = function(window, document) {const App = function(options) {wind
 /******/
 /******/
 /******/ 	// add entry module to deferred list
-/******/ 	deferredModules.push([34,0,1,2]);
+/******/ 	deferredModules.push([35,0,1,2]);
 /******/ 	// run deferred modules when ready
 /******/ 	return checkDeferredModules();
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 12:
-/***/ (function(module, exports) {
-
-function _defineProperty(obj, key, value) {
-  if (key in obj) {
-    Object.defineProperty(obj, key, {
-      value: value,
-      enumerable: true,
-      configurable: true,
-      writable: true
-    });
-  } else {
-    obj[key] = value;
-  }
-
-  return obj;
-}
-
-module.exports = _defineProperty;
-
-/***/ }),
-
-/***/ 34:
+/***/ 35:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -216,10 +194,10 @@ var inherits_default = /*#__PURE__*/__webpack_require__.n(inherits);
 var goods = __webpack_require__(11);
 
 // EXTERNAL MODULE: ./src/components/search/index.js
-var search = __webpack_require__(9);
+var search = __webpack_require__(12);
 
 // EXTERNAL MODULE: ./src/utils/indexData.js
-var indexData = __webpack_require__(7);
+var indexData = __webpack_require__(8);
 
 // CONCATENATED MODULE: ./src/pages/searchResult/searchResult.js
 

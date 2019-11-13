@@ -20,6 +20,7 @@
     line-height: 18px;
     padding:20px;
     background-color: #fff;
+    margin:0 0 20px 0;
   }
 
   &-info{
@@ -29,7 +30,6 @@
     flex-direction: row;
     height: 60px;
     padding:0 20px;
-    margin-top:10px;
     background-color: #fff;
     &-sku{
       color:#666;

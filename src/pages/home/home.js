@@ -15,7 +15,7 @@ class App extends React.Component {
         <Banner></Banner>
         <Navigate></Navigate>
         <Broadcast></Broadcast>
-        {/* <Goods goodslist={indexData}></Goods> */}
+        <Goods goodslist={indexData}></Goods>
       </div>
     )
   }
